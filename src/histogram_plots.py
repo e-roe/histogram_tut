@@ -2,6 +2,7 @@ import cv2
 from matplotlib import pyplot as plt
 import os
 
+
 if __name__ == '__main__':
     examples = ['cascais_under.jpg', 'cascais.jpg', 'cascais_over.jpg']
     labels = ['Subexposição', 'Exposição normal', 'Superexposição']
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     for index in range(3):
         axes[1, index].hist(images[index].flatten(), 256, [0, 256], color ='r')
         axes[1, index].set_ylabel('Frequência')
-        axes[1, index].set_xlabel('Intensidade do pixel')
+        axes[1, index].set_xlabel('Intensidade do Pixel')
         axes[1, index].set_ylim(bottom=0, top=170000)
 
     plt.tight_layout()
